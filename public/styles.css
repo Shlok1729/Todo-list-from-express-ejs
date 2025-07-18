@@ -1,0 +1,142 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #f8ffae 0%, #43c6ac 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: #fff;
+    box-shadow: 0 0.2em 0.5em rgba(44,62,80,0.06);
+}
+
+main {
+    flex: 1 0 auto;
+    max-width: 32em;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 0.5em 2em rgba(44,62,80,0.10);
+    padding: 2em 1.5em;
+}
+
+.todo-form, .filter {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    flex-wrap: wrap;
+}
+
+.todo-form input[type="text"] {
+    flex: 2 1 12em;
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    border: 1px solid #43c6ac;
+    font-size: 1rem;
+}
+
+.todo-form select, .filter select {
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    border: 1px solid #43c6ac;
+    font-size: 1rem;
+}
+
+.todo-form button {
+    padding: 0.7em 2em;
+    border-radius: 2em;
+    border: none;
+    background: #43c6ac;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.todo-form button:hover {
+    background: #2e8b7a;
+}
+
+.alert {
+    background: #ffdddd;
+    color: #b71c1c;
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f6f6f6;
+    border-radius: 0.7em;
+    margin-bottom: 1em;
+    padding: 0.7em 1em;
+    gap: 1em;
+    transition: background 0.2s;
+}
+
+.todo.high { border-left: 0.5em solid #e74c3c; }
+.todo.medium { border-left: 0.5em solid #f1c40f; }
+.todo.low { border-left: 0.5em solid #43c6ac; }
+
+.edit-form, .delete-form {
+    display: inline;
+}
+
+.edit-form input[type="text"] {
+    width: 8em;
+    border-radius: 1em;
+    border: 1px solid #43c6ac;
+    padding: 0.4em 0.8em;
+    margin-right: 0.5em;
+}
+
+.edit-form select {
+    border-radius: 1em;
+    border: 1px solid #43c6ac;
+    padding: 0.4em 0.8em;
+    margin-right: 0.5em;
+}
+
+.edit-form button, .delete-form button {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #43c6ac;
+    margin-left: 0.2em;
+    transition: color 0.2s;
+}
+
+.edit-form button:hover, .delete-form button:hover {
+    color: #e74c3c;
+}
+
+@media (max-width: 40em) {
+    main {
+        padding: 1em 0.5em;
+        margin: 1em;
+    }
+    .todo-form, .filter {
+        flex-direction: column;
+        gap: 0.7em;
+    }
+}

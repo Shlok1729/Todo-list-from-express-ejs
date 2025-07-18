@@ -1,0 +1,21 @@
+{
+  "name": "todo-ejs-app",
+  "version": "1.0.0",
+  "description": "A dynamic Todo List web application using EJS and Express.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "todo",
+    "ejs",
+    "express",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
